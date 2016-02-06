@@ -1,0 +1,65 @@
+name: Core
+depend: [Vault]
+author: Darkmeaches
+version: 0.2.8-Beta
+description: This is a mesh of commands that will enchance your server!
+main: me.endyfreaky.core.Core
+commands:
+  fakeop:
+    description: Fakes op
+    permissions: core.fakeop
+    aliases: [fakeop]
+    usage: /<command> [player]
+  kill:
+    description: Kill specified player
+    permissions: core.kill
+    aliases: [killz]
+    usage: /<command> |(Optional) [player]
+  HackAchievements:
+    description: Gives you all of the achievements!
+    permissions: core.givemeallachievements
+    aliases: [lel]
+    usage: /<command>
+  invisible:
+    description: Makes you invisible!
+    permissions: core.vanish
+    aliases: [invisible]
+    usage: /<command>
+  hub:
+    description: Teleport to hub!
+    permissions: core.hub
+    aliases: [hub]
+    usage: /<command>
+  XP:
+    description: Tells you your exp!
+    permissions: core.whatsmyxp
+    aliases: [XP]
+    usage: /<command>
+  LVL:
+    description: Tell you your level!
+    permissions: core.whatsmylevel
+    aliases: [LVL]
+    usage: /<command>
+  PTP:
+    description: Teleports either you or another player to you or another player.
+    permissions: core.playerteleportation
+    aliases: [PTP]
+    usage: /<command>
+Permissions:
+  core.*:
+    description: Makes you an operator for the plugin
+    default: op
+    children:
+      core.vanish: true
+      core.main: true
+      core.playerteleportation: true
+      core.givemeallachievements: true
+      core.kill: true
+      core.fakeop: true
+  core.main:
+    description: Nothing
+    default: true
+    children:
+      core.hub: true
+      core.whatsmyxp: true
+      core.whatsmylevel: true
